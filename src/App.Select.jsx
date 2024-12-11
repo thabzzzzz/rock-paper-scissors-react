@@ -1,33 +1,10 @@
-export const Select = () => {
-  //   return (
-  //     <form
-  //       onSubmit={(event) => {
-  //         event.preventDefault();
-  //         const form = new FormData(event.target);
-  //         const value = form.get("selection");
-  //         console.log(value);
-  //       }}
-  //     >
-  //       <select
-  //         name="selection"
-  //         style={{
-  //           fontSize: "1.5rem",
-  //         }}
-  //       >
-  //         <option value="rock">Rock</option>
-  //         <option value="paper">Paper</option>
-  //         <option value="scissors">Scissors</option>
-  //       </select>
-
-  //       <button type="submit">CONTINUE</button>
-  //     </form>
-  //   );
-
+export const Select = ({ onPlayerSelect }) => {
   return (
     <div>
-      <button>Rock</button>
-      <button>Paper</button>
-      <button>Scissors</button>
+      <h1>Choose your move</h1>
+      <button onClick={() => onPlayerSelect("rock")}>Rock</button>
+      <button onClick={() => onPlayerSelect("paper")}>Paper</button>
+      <button onClick={() => onPlayerSelect("scissors")}>Scissors</button>
     </div>
   );
 };

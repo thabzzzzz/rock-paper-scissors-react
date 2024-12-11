@@ -36,7 +36,7 @@ const calcMessage = (player, opponent, status) => {
  */
 export const Result = (props) => {
   const status = calcWinner(props.player, props.opponent);
-
+  console.log(props);
   return (
     <div>
       <h1>{status}</h1>
@@ -49,6 +49,7 @@ export const Result = (props) => {
           color: "white",
           fontSize: "1.5rem",
         }}
+        onClick={props.onReset}
       >
         PLAY AGAIN
       </button>
